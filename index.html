@@ -1228,8 +1228,11 @@
             }
 
             if (itemblok === 'Torch.png' || itemblok === 'Leaves.png' || itemblok === 'Cherryleaves.png' || itemblok === 'Flower.png' || itemblok === 'Oakstair.png' || itemblok === 'Oakstairs.png' || itemblok === 'OakstairFlipped.png' || itemblok === 'OakstairsFlipped.png' || itemblok === 'Sprucestair.png' || itemblok === 'Sprucestairs.png' || itemblok === 'SprucestairFlipped.png' || itemblok === 'SprucestairsFlipped.png' || itemblok === 'Trapdoor5.png' || itemblok === 'Ladder.png' || itemblok === 'Flower2.png' || itemblok === 'Cake.png' || itemblok === 'Lantern.png' || itemblok === 'Mushroom.png' || itemblok === 'Painting.png' || itemblok === 'Painting2.png' || itemblok === 'LongGrass.png'|| itemblok === 'Trapdoor2.png' || itemblok === 'CobblestoneSlab.png' || itemblok === 'StonebricksSlab.png' || itemblok === 'OakPlanksSlab.png' || itemblok === 'NetherbricksSlab.png' || itemblok === 'MossycobblestoneSlab.png' || itemblok === 'StoneSlab.png' || itemblok === 'BirchSlab.png' || itemblok === 'BrickSlab.png' || itemblok === 'Cactus .png' || itemblok === 'SpruceSlab.png') {
-                var bovcheck = document.getElementById("b" + welk);
-                if(bovcheck){
+                var opcheck = document.getElementById("b" + welk);
+                var bovencheck = document.getElementById("b" + String(welk - 1000).padStart(4, '0'));
+                var ondercheck = document.getElementById("b" + (parseInt(welk) + 1000));
+                if(opcheck){
+                console.log('ja');
                 var bg = document.getElementById("b" + welk).style.backgroundImage;
                 if(bg && bg.includes("Bedright.png")){
                 var welkk = parseInt(welk) - 1;
@@ -1245,6 +1248,29 @@
                 document.getElementById("b" + welkk).style.backgroundSize = "cover";
                 document.getElementById("b" + welkk).style.backgroundColor = "rgba(0,0,0,0)";
                 document.getElementById("b" + welkk).remove();
+                }
+                
+
+                if(bovencheck){
+                var bg = document.getElementById("b" + welk).style.backgroundImage; 
+                if(bg && ( bg.includes("Doorbottom.png") || bg.includes("Doorbottom2.png") || bg.includes("Doorbottom3.png") || bg.includes("Doorbottom4.png") )){
+                var welkk = String(welk - 1000).padStart(4, '0');
+                document.getElementById("b" + welkk).style.background = "url(https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png)";
+                document.getElementById("b" + welkk).style.backgroundSize = "cover";
+                document.getElementById("b" + welkk).style.backgroundColor = "rgba(0,0,0,0)";
+                document.getElementById("b" + welkk).remove();
+                }
+                }
+
+                if(ondercheck){
+                var bg = document.getElementById("b" + welk).style.backgroundImage; 
+                if(bg && ( bg.includes("Doortop.png") || bg.includes("Doortop2.png") || bg.includes("Doortop3.png") || bg.includes("Doortop4.png") )){
+                var welkk = parseInt(welk) + 1000;
+                document.getElementById("b" + welkk).style.background = "url(https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png)";
+                document.getElementById("b" + welkk).style.backgroundSize = "cover";
+                document.getElementById("b" + welkk).style.backgroundColor = "rgba(0,0,0,0)";
+                document.getElementById("b" + welkk).remove();
+                }
                 }
                 }
                 
