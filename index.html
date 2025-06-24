@@ -10,12 +10,9 @@
         cursor: crosshair;
         margin:0;
         padding:0;
-        /*height:180vh;*/
-        /*background: url("https://static.planetminecraft.com/files/image/minecraft/texture-pack/2024/308/17576286_xl.webp");*/
         background-color: rgb(165, 204, 255);
         background-size: cover;
         animation: daynightanimation 800s linear infinite;
-        /*transition:0.3s;*/
     }
     #game{
         width:150vw;
@@ -25,7 +22,6 @@
         bottom:-100vw;
         filter: brightness(100%);
         animation: darklightanimation 800s linear infinite;
-        /*transition:0.3s;*/
     }
     .block{
         width:5vw;
@@ -33,13 +29,8 @@
         background: url(Dirt.png);
         background-size:cover;
         position: relative;
-        /*transition:0.1s;*/
     }
-    /*.block:hover{
-        width: calc(5vw - 2px);
-        height: calc(5vw - 2px);
-        border:white solid 1px;
-    }*/
+
     #itembar{
         width:45vw;
         position: fixed;
@@ -49,14 +40,13 @@
         height:5vw;
         display:flex;
         z-index:11;
-        /*border:solid 4px #555555;*/
     }
 
     .itemslot{
         z-index:11;
         width:5vw;
         height:5vw;
-        background: url(/invslot.png);
+        background: url(invslot.png);
         background-size:cover;
         display:flex;
         align-items: center;
@@ -65,7 +55,6 @@
     .item{
         width:2.3vw;
         height:2.3vw;
-        /*background: url(Grass.png);*/
         background-size:cover;
     }
     #arm{
@@ -97,9 +86,6 @@
     #inventory{
         background-color: #c6c6c6f2;
         border: 6px solid #373737;
-        /*background-color: rgba(255,255,255,0.2);
-        backdrop-filter: blur(10px);
-        border-radius:15px; */
         width: 47vw;
         height:25vw;
         padding:1vw;
@@ -152,13 +138,11 @@
     .invslot{
         width:5vw;
         height:5vw;
-        background: url(/invslot.png);
+        background: url(invslot.png);
         background-size:cover;
         display:flex;
         align-items: center;
         justify-content: center;
-        /*margin-right:-0.1vw;
-        margin-left:-0.1vw;*/
         gap:0;
     }
 
@@ -169,25 +153,9 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    /*pointer-events: none; /* zodat clicks nog het onderliggende blok raken */
     z-index: 10;
-    /*filter: drop-shadow( 0px 0px 1.5px rgba(0, 0, 0, 0.685));*/
 }
 
-    .mob{
-        width:7vw;
-        height:7vw;
-        position: absolute;
-        bottom: 55vw;
-        left:15vw;
-        /*background:url(mob/varkengif.gif);*/
-        background: url("https://minecraft.wiki/images/Golden_Parrot_Fly_%28Dungeons%29.gif?535f1");
-        background-size: cover;
-        animation: loopmob 60s linear infinite;
-        /*display:flex;*/
-        display:none;
-        z-index:9999;
-    }
 
     @keyframes loopmob {
         0%{
@@ -252,11 +220,9 @@
     }
 
     #pause{
-        /*background: url("https://minecraft.wiki/images/thumb/18w43a_menuscreen.png/800px-18w43a_menuscreen.png?68263");*/
         background-size: cover;
         width:70dvw;
         height:70dvh;
-        /*display:flex;*/
         display:none;
         flex-direction:column;
         justify-content: center;
@@ -301,13 +267,6 @@
         padding:0;
     }
 
-    /*#start .pausebutton{
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-    }*/
-
     .pausebutton p{
        width:100%;
        height:calc(100% - .1em);
@@ -329,17 +288,8 @@
         background-color:purple;
     }
 
-    /*#pclist h2{
-        border-radius: 2px;
-        border: 1px solid black;
-        /*font-size:1vw;
-        text-align:center;
-        font-family:arial;
-    }*/
-
     #pclist{
         margin-top:1.5vh;
-        /*border:1px solid black;*/
         width:20vw;
         height:72vh;
         display:flex;
@@ -363,7 +313,6 @@
 
     #functionlist{
         margin-top:1.5vh;
-        /*border:1px solid black;*/
         width:22vw;
         margin-left:2vw;
         height:72vh;
@@ -381,7 +330,6 @@
         border-radius:50%;
         width:3vw;
         height:3vw;
-        /*text-align:center;*/
         display:flex;
         justify-content: center;
         align-items: center;
