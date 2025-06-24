@@ -1212,13 +1212,6 @@
             document.getElementById("arm").style.bottom = "-5%";
             document.getElementById("arm").style.transform = "rotate(-14deg)";
 
-            /*if(whensave === 4){
-                whensave = 1;
-                saveworld();
-            } else{
-                whensave++;
-            }*/
-
             if(itemblok === undefined){
                 itemblok = "https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png";  
             }
@@ -1235,6 +1228,26 @@
             }
 
             if (itemblok === 'Torch.png' || itemblok === 'Leaves.png' || itemblok === 'Cherryleaves.png' || itemblok === 'Flower.png' || itemblok === 'Oakstair.png' || itemblok === 'Oakstairs.png' || itemblok === 'OakstairFlipped.png' || itemblok === 'OakstairsFlipped.png' || itemblok === 'Sprucestair.png' || itemblok === 'Sprucestairs.png' || itemblok === 'SprucestairFlipped.png' || itemblok === 'SprucestairsFlipped.png' || itemblok === 'Trapdoor5.png' || itemblok === 'Ladder.png' || itemblok === 'Flower2.png' || itemblok === 'Cake.png' || itemblok === 'Lantern.png' || itemblok === 'Mushroom.png' || itemblok === 'Painting.png' || itemblok === 'Painting2.png' || itemblok === 'LongGrass.png'|| itemblok === 'Trapdoor2.png' || itemblok === 'CobblestoneSlab.png' || itemblok === 'StonebricksSlab.png' || itemblok === 'OakPlanksSlab.png' || itemblok === 'NetherbricksSlab.png' || itemblok === 'MossycobblestoneSlab.png' || itemblok === 'StoneSlab.png' || itemblok === 'BirchSlab.png' || itemblok === 'BrickSlab.png' || itemblok === 'Cactus .png' || itemblok === 'SpruceSlab.png') {
+                var bovcheck = document.getElementById("b" + welk);
+                if(bovcheck){
+                var bg = document.getElementById("b" + welk).style.backgroundImage;
+                if(bg && bg.includes("Bedright.png")){
+                var welkk = parseInt(welk) - 1;
+                document.getElementById("b" + welkk).style.background = "url(https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png)";
+                document.getElementById("b" + welkk).style.backgroundSize = "cover";
+                document.getElementById("b" + welkk).style.backgroundColor = "rgba(0,0,0,0)";
+                document.getElementById("b" + welkk).remove();
+                }
+
+                if(bg && bg.includes("Bedleft.png")){
+                var welkk = parseInt(welk) + 1;
+                document.getElementById("b" + welkk).style.background = "url(https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png)";
+                document.getElementById("b" + welkk).style.backgroundSize = "cover";
+                document.getElementById("b" + welkk).style.backgroundColor = "rgba(0,0,0,0)";
+                document.getElementById("b" + welkk).remove();
+                }
+                }
+                
                 document.getElementById(welk).innerHTML =  `<div id="b${welk}" style="background-image: url('${itemblok}'); background-size: 100% auto; background-repeat: no-repeat; background-position:bottom;" class="bovenop"></div>`;
             } else {
                 document.getElementById(welk).style.background = `url(${itemblok})`;
@@ -1254,17 +1267,6 @@
         function legend(welkk){
             if (welkk){
             var welk = parseInt(welkk);
-           /* if (welk < 10000){
-                if(welk < 1200 && welk > 1100){
-                    hoeveel = 1000;
-                } else{
-                    hoeveel = 100
-                }
-            } else if(welk > 10000 && welk < 12000){
-                hoeveel = 10000;
-            } else{
-                hoeveel = 1000;
-            }*/
            hoeveel = 1000;
             console.log(hoeveel);
             document.getElementById(welk).innerHTML =  `<div id="b${welk}" style="background-image: url('https://tiermaker.com/images/media/template_images/2024/16378842/minecraft-youtuber-skins-16378842/unnamed-12.png'); background-size: cover; background-position: bottom" class="bovenop"></div>`;
@@ -1291,7 +1293,6 @@
             var blok7 = welk + hoeveel - Math.floor(Math.random() * 2) - 1;
             var blok8 = welk - hoeveel + Math.floor(Math.random() * 4) - 2;
             var blok9 = welk + hoeveel + Math.floor(Math.random() * 4) - 2;
-            //var blok9 = welk + hoeveel - 1;
             var blok10 = welk + hoeveel + Math.floor(Math.random() * 4) - 2;
             var blok11 = welk - hoeveel + Math.floor(Math.random() * 4) - 2;
             var blok12 = welk + hoeveel * 2 + Math.floor(Math.random() * 4) - 2;
