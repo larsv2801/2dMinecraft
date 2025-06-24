@@ -1034,12 +1034,6 @@
                       }
                       if(index === 7 && !plaatscooldown){
                         plaats(selectedrij + "0" + String(selectedblock).padStart(2, '0'));
-                        if(whensave === 3){
-                            whensave = 1;
-                            saveworld();
-                        } else{
-                            whensave++;
-                        }
                         plaatscooldown = true;
                         setTimeout(() => {
                             plaatscooldown = false
@@ -1148,12 +1142,6 @@
         var whensave = 1;
 
         function remv(welk){
-            if(whensave === 3){
-                whensave = 1;
-                saveworld();
-            } else{
-                whensave++;
-            }
             document.getElementById("arm").style.bottom = "-5%";
             document.getElementById("arm").style.transform = "rotate(-14deg)";
             setTimeout(terugarm,150);
